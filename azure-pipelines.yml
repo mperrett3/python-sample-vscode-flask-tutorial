@@ -45,3 +45,4 @@ steps:
     ConnectedServiceName: $(ConnectedServiceName)
     WebAppName: $(WebAppName)
     Package: '$(Build.ArtifactStagingDirectory)/Application$(Build.BuildId).zip'
+    StartupCommand: 'gunicorn --bind=0.0.0.0 --workers=4 startup:app'
